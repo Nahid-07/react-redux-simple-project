@@ -1,7 +1,6 @@
 import React from "react";
 import { BiListPlus } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-import { ADD_TO_CART } from "../redux/actionTypes/actionTypes";
 import { add_to_cart } from "../redux/productActions/productActions";
 
 const ProductCard = ({ product }) => {
