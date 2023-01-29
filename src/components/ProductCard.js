@@ -9,13 +9,17 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { useLocation } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  console.log(product.quantity);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   return (
     <div
-      className="shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900"
+      className="relative shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900"
       key={product._id}
     >
+      {pathname.includes("cart") && <div className="bg-indigo-500 rounded-full absolute w-8 h-8 grid place-items-center right-2 top-2">
+        <p className="text-white">{product.quantity}</p>
+      </div>}
       <div className="h-52 w-52 mx-auto">
         <img src={product.image} alt={product.model} />
       </div>
