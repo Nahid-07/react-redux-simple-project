@@ -9,7 +9,6 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { useLocation } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  console.log(product.quantity);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   return (
